@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+from main import *
 
 st.title('Asistente revisor de contenidos')
 st.markdown('---')
