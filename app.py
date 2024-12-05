@@ -2,6 +2,9 @@ import streamlit as st
 import pandas as pd
 from main import *
 
+#Creo variable de interfaz en True para contar con dos estados: cuando es None,
+#se muestra la interfaz normal; cuando sí tiene un archivo, cambia la interfaz (para mostrar las características del planner)
+
 st.title('Asistente revisor de contenidos')
 st.markdown('---')
 st.html('<h2>¿Cómo funciona?</h2>')
@@ -12,9 +15,5 @@ st.html('<h2>Sube aquí el planner ⬇</h2>')
 uploaded_file = st.file_uploader("Sube acá el planner que descargaste, el excel", type=["xlsx"])
 
 if uploaded_file is not None:
-    # Leer el archivo cargado
     data = pd.read_excel(uploaded_file)
-
-    # Mostrar el dataset cargado
-    #st.write("Dataset cargado:")
-    #st.write(data.head())
+    treat_excel(data)
