@@ -1,3 +1,4 @@
 revisor_workspace.code-workspace
-/venv/
+/.venv/
 main.cpython-311.pyc
+ChatGPTLink.txt
